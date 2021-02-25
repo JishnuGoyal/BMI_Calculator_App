@@ -6,6 +6,7 @@ import com.example.bmicalculator.databinding.ActivityMainBinding
 import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
+    //
 
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
