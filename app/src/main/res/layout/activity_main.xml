@@ -8,61 +8,59 @@
 
 
     <TextView
-        android:id="@+id/bmiTextView"
+        android:id="@+id/bmiDisplayTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="TextView"
-        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
         android:textSize="30sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/bmiDisplayText"
+        android:id="@+id/bmiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="BMI"
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="@+id/bmiTextView"
-        app:layout_constraintStart_toStartOf="@+id/bmiTextView"
-        app:layout_constraintTop_toBottomOf="@+id/bmiTextView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmiDisplayTextView" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/heightInputLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bmiDisplayText">
+        app:layout_constraintTop_toBottomOf="@+id/bmiText">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/height"
+            android:id="@+id/heightInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Height in cm"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:hint="Height in cm" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/weightInputLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heightInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/weight"
+            android:id="@+id/weightInput"
             android:inputType="numberDecimal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,11 +81,9 @@
         android:id="@+id/btnClear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Clear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
